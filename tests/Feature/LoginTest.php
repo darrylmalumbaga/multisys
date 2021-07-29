@@ -12,8 +12,8 @@ class LoginTest extends TestCase
     public function test_user_login_with_correct_credentials(){
         Session::start();
         $response = $this->call('POST', 'api/login', [
-            'email' => 'backend2@multisyscorp.com',
-            'password' => 'test123',
+            'email' => 'darryltesting@testing.com',
+            'password' => '123123',
             '_token' => csrf_token()
         ]);
         $this->assertEquals(201, $response->getStatusCode());
